@@ -1,0 +1,6 @@
+name: Gerdet
+version: 1.0
+main: ch.Forticolers.Gerdet.Main
+author: Forticolers
+authors: Reamz
+commands:
