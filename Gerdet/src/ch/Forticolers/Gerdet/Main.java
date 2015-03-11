@@ -11,7 +11,7 @@ public class Main extends JavaPlugin implements Listener{
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		//Variable ici
+		//Variables ici
 		
 		//Codes ici
 		
@@ -20,7 +20,7 @@ public class Main extends JavaPlugin implements Listener{
 
 	@Override
 	public void onDisable() {
-		//Variable ici
+		//Variables ici
 		
 		//Codes ici
 		
@@ -28,7 +28,7 @@ public class Main extends JavaPlugin implements Listener{
 
 	@Override
 	public void onEnable() {
-		//Variable ici
+		//Variables ici
 		
 		//Codes ici
 		
@@ -36,7 +36,7 @@ public class Main extends JavaPlugin implements Listener{
 
 	@Override
 	public void onLoad() {
-		//Variable ici
+		//Variables ici
 		
 		//Codes ici
 		
@@ -44,7 +44,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event){
-		//Variable ici
+		//Variables ici
 		
 		//Codes ici
 		
