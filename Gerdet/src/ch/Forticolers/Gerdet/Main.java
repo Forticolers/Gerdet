@@ -18,7 +18,7 @@ public class Main extends JavaPlugin implements Listener{
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 	//Variables ici
-		//Player player = (Player)sender;
+		Player player = (Player)sender;
 	//Codes ici
 		if(sender instanceof Player){
 			if(command.getName().equalsIgnoreCase("armory")){
