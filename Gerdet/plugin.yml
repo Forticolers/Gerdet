@@ -4,3 +4,6 @@ main: ch.Forticolers.Gerdet.Main
 author: Forticolers
 authors: Reamz
 commands:
+ armory:
+  description: Vous permet de gerer vos inventaires de combats
+  usage: /<command> <show|modify|reset|select> <armor|stuff>
