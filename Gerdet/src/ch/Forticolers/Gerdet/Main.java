@@ -46,7 +46,7 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					if(args[0].equalsIgnoreCase("reset"))
 					{
-						Utils.sendCustomMessage(player, "resdet");
+						Utils.sendCustomMessage(player, "reset");
 						return false;
 					}					
 				}
@@ -61,7 +61,7 @@ public class Main extends JavaPlugin implements Listener{
 	public void onDisable() 
 	{
 		//Variables ici
-		//-------------------------------------------------------------------YOLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+		
 		//Codes ici
 		saveConfig();
 		System.out.println("Sauvegarde de la configuration");
