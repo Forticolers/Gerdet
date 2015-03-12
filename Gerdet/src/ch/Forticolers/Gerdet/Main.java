@@ -20,23 +20,26 @@ public class Main extends JavaPlugin implements Listener{
 	//Variables ici
 		Player player = (Player)sender;
 	//Codes ici
-		if(sender instanceof Player){
-			if(command.getName().equalsIgnoreCase("armory")){
-				if(args.length > 1){
-					if(args[0].equalsIgnoreCase("show")){
-						
+		if(sender instanceof Player)
+		{
+			if(command.getName().equalsIgnoreCase("armory"))
+			{
+				if(args.length > 1)
+				{
+					if(args[0].equalsIgnoreCase("show"))
+					{						
 						return false;
 					}
-					else if(args[0].equalsIgnoreCase("modify")){
-							
+					if(args[0].equalsIgnoreCase("modify"))
+					{							
 						return false;
 					}
-					else if(args[0].equalsIgnoreCase("select")){
-							
+					if(args[0].equalsIgnoreCase("select"))
+					{							
 						return false;
 					}
-					else if(args[0].equalsIgnoreCase("reset")){
-							
+					if(args[0].equalsIgnoreCase("reset"))
+					{							
 						return false;
 					}					
 				}
@@ -71,55 +74,68 @@ public class Main extends JavaPlugin implements Listener{
 		//Création du dossier du plugin
 		File dossier;		
 		dossier = new File (Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder()+"");
-		if(dossier.exists()){
+		
+		if(dossier.exists())
+		{
 			getLogger().info("Directory already existed !");
 		}
-		else{
+		else
+		{
 			dossier.mkdirs();
 			getLogger().info("Directory succesfully created !");
 		}		
 	}
 	
 	@EventHandler
-	public void onPlayerJoin(PlayerJoinEvent event){
+	public void onPlayerJoin(PlayerJoinEvent event)
+	{
 	//Variables ici
-		Player player = event.getPlayer();		
-	//Codes ici
-		//Message bienvenue
+		final Player player = event.getPlayer();		
+		//Codes ici
+			//Message bienvenue
 			Bukkit.getScheduler().scheduleSyncDelayedTask(this, new Runnable(){			
-				public void run(){
+				@Override
+				public void run()
+				{
 					player.sendMessage(ChatColor.AQUA+"Bienvenue, "+ player.getName() + "\nFaite /help pour voir \nles commandes qui vont ont été attribuées");
 				}
 			}, 10);
-		//Création du dossier inventaire
+			//Création du dossier inventaire
 			File dossier;		
 			dossier = new File (Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder()+"\\"+player.getName());
-			if(dossier.exists()){
+			if(dossier.exists())
+			{
 				getLogger().info("Directory already existed !");
 			}
-			else{
+			else
+			{
 				dossier.mkdirs();
 				getLogger().info("Directory succesfully created !");
 			}
-		//Création des fichier stuff et armure
+			//Création des fichier stuff et armure
 			File fileArmor, fileStuff;				
 			fileArmor = new File(Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Armor.txt");
 			fileStuff = new File(Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Stuff.txt");
-		//armure
-			if(!(fileArmor.exists())){
-				try{
+			//armure
+			if(!(fileArmor.exists()))
+			{
+				try
+				{
 					fileArmor.createNewFile();
 				}
-				catch(IOException e){
+				catch(IOException e)
+				{
 					e.printStackTrace();
 				}				
 			}
-		//stuff
+			//stuff
 			if(!(fileStuff.exists())){
-				try{
+				try
+				{
 					fileStuff.createNewFile();
 				}
-				catch(IOException e){
+				catch(IOException e)
+				{
 					e.printStackTrace();
 				}				
 			}
