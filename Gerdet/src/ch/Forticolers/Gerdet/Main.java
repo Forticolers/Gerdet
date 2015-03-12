@@ -46,7 +46,7 @@ public class Main extends JavaPlugin implements Listener{
 					}
 					if(args[0].equalsIgnoreCase("reset"))
 					{
-						Utils.sendCustomMessage(player, "reset");
+						Utils.sendCustomMessage(player, "resdet");
 						return false;
 					}					
 				}
