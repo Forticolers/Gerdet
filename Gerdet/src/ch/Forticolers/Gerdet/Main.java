@@ -74,13 +74,6 @@ public class Main extends JavaPlugin implements Listener{
 		
 		//Codes ici
 		Bukkit.getPluginManager().registerEvents(this, this);
-	}
-
-	@Override
-	public void onLoad() {
-	//Variables ici
-		
-	//Codes ici
 		//Création du dossier du plugin
 		File dossier;		
 		dossier = new File (Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder()+"");
@@ -94,6 +87,14 @@ public class Main extends JavaPlugin implements Listener{
 			dossier.mkdirs();
 			getLogger().info("Directory succesfully created !");
 		}		
+	}
+
+	@Override
+	public void onLoad() {
+	//Variables ici
+		
+	//Codes ici
+	
 	}
 	
 	@EventHandler
