@@ -2,7 +2,8 @@ name: Gerdet
 version: 1.0
 main: ch.Forticolers.Gerdet.Main
 author: Forticolers
-authors: [Reamz]
+authors: [Reaamz]
+
 commands:
  armory:
   description: Vous permet de gerer vos inventaires de combats

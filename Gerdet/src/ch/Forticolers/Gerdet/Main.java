@@ -126,7 +126,7 @@ public class Main extends JavaPlugin implements Listener{
 				catch(IOException e)
 				{
 					e.printStackTrace();
-				}				
+				}
 			}
 			//stuff
 			if(!(fileStuff.exists())){
