@@ -16,10 +16,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin implements Listener{
 
 	@Override
-	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-	//Variables ici
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
+	{
+		//Variables ici
+		
 		Player player = (Player)sender;
-	//Codes ici
+		
+		//Codes ici
 		if(sender instanceof Player)
 		{
 			if(command.getName().equalsIgnoreCase("armory"))
@@ -27,19 +30,23 @@ public class Main extends JavaPlugin implements Listener{
 				if(args.length > 1)
 				{
 					if(args[0].equalsIgnoreCase("show"))
-					{						
+					{
+						Utils.sendCustomMessage(player, "show");
 						return false;
 					}
 					if(args[0].equalsIgnoreCase("modify"))
-					{							
+					{
+						Utils.sendCustomMessage(player, "modify");
 						return false;
 					}
 					if(args[0].equalsIgnoreCase("select"))
-					{							
+					{
+						Utils.sendCustomMessage(player, "select");
 						return false;
 					}
 					if(args[0].equalsIgnoreCase("reset"))
-					{							
+					{
+						Utils.sendCustomMessage(player, "reset");
 						return false;
 					}					
 				}
@@ -51,18 +58,21 @@ public class Main extends JavaPlugin implements Listener{
 	}
 
 	@Override
-	public void onDisable() {
-	//Variables ici
+	public void onDisable() 
+	{
+		//Variables ici
 		
-	//Codes ici
-		
+		//Codes ici
+		saveConfig();
+		System.out.println("Sauvegarde de la configuration");
 	}
 
 	@Override
-	public void onEnable() {
-	//Variables ici
+	public void onEnable() 
+	{
+		//Variables ici
 		
-	//Codes ici
+		//Codes ici
 		Bukkit.getPluginManager().registerEvents(this, this);
 	}
 
@@ -89,7 +99,7 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event)
 	{
-	//Variables ici
+		//Variables ici
 		final Player player = event.getPlayer();		
 		//Codes ici
 			//Message bienvenue
