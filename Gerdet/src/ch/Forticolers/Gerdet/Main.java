@@ -13,7 +13,57 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin implements Listener{
+public class Main extends JavaPlugin implements Listener
+{
+	@Override
+	public void onLoad() 
+	{
+		//Variables ici
+		
+		//Codes ici
+	
+	}
+	
+	@Override
+	public void onEnable() 
+	{
+		//Variables ici
+		
+		//Codes ici
+		init();
+	}
+	
+	@Override
+	public void onDisable() 
+	{
+		//Variables ici
+		
+		//Codes ici
+		saveConfig();
+		System.out.println("Sauvegarde de la configuration");
+	}
+	
+	private void init()
+	{
+		//ici il y auras les listener pour les VirtualInventoy et le methodes qui on besoin d'etre executées a l'init.
+		
+		//Les listener vont etre redirigés dans un autre classe dans le future----------------------------------------------------
+		Bukkit.getPluginManager().registerEvents(this, this);
+		
+		//Création du dossier du plugin
+		File dossier;		
+		dossier = new File (Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder()+"");
+		
+		if(dossier.exists())
+		{
+			getLogger().info("Directory already existed !");
+		}
+		else
+		{
+			dossier.mkdirs();
+			getLogger().info("Directory succesfully created !");
+		}
+	}
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
@@ -55,46 +105,6 @@ public class Main extends JavaPlugin implements Listener{
 			}
 		}
 		return false;
-	}
-
-	@Override
-	public void onDisable() 
-	{
-		//Variables ici
-		
-		//Codes ici
-		saveConfig();
-		System.out.println("Sauvegarde de la configuration");
-	}
-
-	@Override
-	public void onEnable() 
-	{
-		//Variables ici
-		
-		//Codes ici
-		Bukkit.getPluginManager().registerEvents(this, this);
-		//Création du dossier du plugin
-		File dossier;		
-		dossier = new File (Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder()+"");
-		
-		if(dossier.exists())
-		{
-			getLogger().info("Directory already existed !");
-		}
-		else
-		{
-			dossier.mkdirs();
-			getLogger().info("Directory succesfully created !");
-		}		
-	}
-
-	@Override
-	public void onLoad() {
-	//Variables ici
-		
-	//Codes ici
-	
 	}
 	
 	@EventHandler
