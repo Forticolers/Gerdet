@@ -1,20 +1,27 @@
 package ch.Forticolers.Gerdet.Commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
 import ch.Forticolers.Gerdet.Utils;
+import ch.Forticolers.Gerdet.StuffInventory.InventoryVI;
 
 public class ArmoryCommandExecutor implements CommandExecutor{
 
 	@Override
-	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		//Variables ici
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
+	{
+				//Variables ici
 		
 				Player player = (Player)sender;
+				
+				InventoryVI VIInstance = new InventoryVI();
 				
 				//Codes ici
 				if(sender instanceof Player)
@@ -26,7 +33,13 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 							if(args[0].equalsIgnoreCase("show"))
 							{
 								Utils.sendCustomMessage(player, "show");
-								return false;
+								
+								Inventory inv = VIInstance.createInventory(new ItemStack[]{
+									new ItemStack(Material.DIAMOND_SWORD)	
+								});
+								
+								VIInstance.showInventory(player, inv);
+								return true;
 							}
 							if(args[0].equalsIgnoreCase("modify"))
 							{
