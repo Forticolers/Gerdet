@@ -54,6 +54,7 @@ public class Main extends JavaPlugin implements Listener
 		CommandExecutor armoryExecutor = new ArmoryCommandExecutor();
 		getCommand("armory").setExecutor(armoryExecutor);
 		
+		//-----------Instances des Listeners nécessaires au bon fonctionnement du plugin.
 		@SuppressWarnings("unused")
 		ArmorListener ArmorLInstance = new ArmorListener(this);
 		@SuppressWarnings("unused")
