@@ -6,12 +6,15 @@ import java.io.IOException;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import ch.Forticolers.Gerdet.Commands.ArmoryCommandExecutor;
 
 public class Main extends JavaPlugin implements Listener
 {
@@ -47,6 +50,9 @@ public class Main extends JavaPlugin implements Listener
 	private void init()
 	{
 		//ici il y auras les listener pour les VirtualInventoy et le methodes qui on besoin d'etre executées a l'init.
+		
+		CommandExecutor armoryExecutor = new ArmoryCommandExecutor();
+		getCommand("armory").setExecutor(armoryExecutor);
 		
 		//Les listener vont etre redirigés dans un autre classe dans le future----------------------------------------------------
 		Bukkit.getPluginManager().registerEvents(this, this);
