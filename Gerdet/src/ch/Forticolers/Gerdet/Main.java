@@ -20,7 +20,7 @@ public class Main extends JavaPlugin implements Listener
 	public void onLoad() 
 	{
 		//Variables ici
-		Salut
+		
 		//Codes ici
 	
 	}
