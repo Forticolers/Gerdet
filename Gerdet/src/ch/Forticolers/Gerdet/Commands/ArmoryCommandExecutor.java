@@ -33,15 +33,8 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 						{
 							if(args[0].equalsIgnoreCase("show"))
 							{
-								Utils.sendCustomMessage(player, "show");
-								
-								Inventory inv = VIInstance.createInventory(new ItemStack[]{
-									new ItemStack(Material.DIAMOND_SWORD)	
-								});
-								
-								VIInstance.showInventory(player, inv);
-								
-								return true;
+								Utils.sendCustomMessage(player, "show");								
+								return false;
 							}
 							if(args[0].equalsIgnoreCase("modify"))
 							{
