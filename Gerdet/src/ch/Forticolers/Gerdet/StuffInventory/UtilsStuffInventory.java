@@ -10,7 +10,7 @@ public class UtilsStuffInventory {
 		return armor;		
 	}
 	public static ItemStack[] GetStuffFromPlay(Player player){
-		ItemStack[] stuff = new ItemStack[36];
+		ItemStack[] stuff = new ItemStack[45];
 		
 		return stuff;		
 	}
