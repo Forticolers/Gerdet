@@ -50,20 +50,6 @@ public class Main extends JavaPlugin implements Listener
 		
 		//Les listener vont etre redirigés dans un autre classe dans le future----------------------------------------------------
 		Bukkit.getPluginManager().registerEvents(this, this);
-		
-		//Création du dossier du plugin
-		File dossier;		
-		dossier = new File (Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder()+"");
-		
-		if(dossier.exists())
-		{
-			getLogger().info("Directory already existed !");
-		}
-		else
-		{
-			dossier.mkdirs();
-			getLogger().info("Directory succesfully created !");
-		}
 	}
 
 	@Override
