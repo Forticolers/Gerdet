@@ -39,6 +39,7 @@ public class Main extends JavaPlugin implements Listener
 		//Variables ici
 		
 		//Codes ici
+		
 		saveConfig();
 		System.out.println("Sauvegarde de la configuration");
 	}
