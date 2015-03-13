@@ -13,6 +13,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import ch.Forticolers.Gerdet.Commands.ArmoryCommandExecutor;
+import ch.Forticolers.Gerdet.StuffInventory.ArmorListener;
+import ch.Forticolers.Gerdet.StuffInventory.StuffListener;
 
 public class Main extends JavaPlugin implements Listener
 {
@@ -51,6 +53,11 @@ public class Main extends JavaPlugin implements Listener
 		
 		CommandExecutor armoryExecutor = new ArmoryCommandExecutor();
 		getCommand("armory").setExecutor(armoryExecutor);
+		
+		@SuppressWarnings("unused")
+		ArmorListener ArmorLInstance = new ArmorListener(this);
+		@SuppressWarnings("unused")
+		StuffListener StuffLInstance = new StuffListener(this);
 		
 		//Les listener vont etre redirigés dans un autre classe dans le future----------------------------------------------------
 		Bukkit.getPluginManager().registerEvents(this, this);
