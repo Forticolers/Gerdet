@@ -9,6 +9,7 @@ import org.bukkit.inventory.Inventory;
 
 import ch.Forticolers.Gerdet.Utils;
 import ch.Forticolers.Gerdet.StuffInventory.ArmorVirtualInventory;
+import ch.Forticolers.Gerdet.StuffInventory.StuffVirtualInventory;
 import ch.Forticolers.Gerdet.StuffInventory.UtilsStuffInventory;
 
 public class ArmoryCommandExecutor implements CommandExecutor{
@@ -20,7 +21,8 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 		
 				Player player = (Player)sender;
 				
-				ArmorVirtualInventory VIInstance = new ArmorVirtualInventory();
+				ArmorVirtualInventory AVIInstance = new ArmorVirtualInventory();
+				StuffVirtualInventory SVIInstance = new StuffVirtualInventory();
 				
 				//Codes ici
 				if(sender instanceof Player)
@@ -31,12 +33,31 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 						{
 							if(args[0].equalsIgnoreCase("show"))
 							{
-								Inventory inventory = VIInstance.createInventory(UtilsStuffInventory.GetArmorFromPlay(player));
+								if(args.length > 1)
+								{
+									if (args[1].equalsIgnoreCase("armor"))
+									{	
+										Inventory inventory = AVIInstance.createInventory(UtilsStuffInventory.GetArmorFromPlay(player));
+									
+										AVIInstance.showInventory(player, inventory);
+									
+										return true;
+									}
+									if (args[1].equalsIgnoreCase("stuff"))
+									{
+										Inventory inventory = SVIInstance.createInventory(UtilsStuffInventory.GetStuffFromPlay(player));
+									
+										SVIInstance.showInventory(player, inventory);
+										return true;
+									}
+									
+									return false;
 								
-								VIInstance.showInventory(player, inventory);
+								}
+								
 								
 								Utils.sendCustomMessage(player, "show");								
-								return true;
+								
 							}
 							if(args[0].equalsIgnoreCase("modify"))
 							{
