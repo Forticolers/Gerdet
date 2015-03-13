@@ -11,7 +11,6 @@ import ch.Forticolers.Gerdet.VirtualInventory.IVirtualInventory;
 public class InventoryVI implements IVirtualInventory 
 {
 	Inventory inventory;
-	Player owner;
 	
 	@Override
 	public Inventory getInventory() 
@@ -20,20 +19,12 @@ public class InventoryVI implements IVirtualInventory
 	}
 
 	@Override
-	public Player getOwner() 
+	public Inventory createInventory(ItemStack[] items) 
 	{
-		return this.owner;
-	}
-
-	@Override
-	public Inventory createInventory(Player owner, ItemStack[] items) 
-	{
-		this.inventory = Bukkit.createInventory(owner, 9,ChatColor.UNDERLINE + "Inv");
+		this.inventory = Bukkit.createInventory(null, 36,ChatColor.UNDERLINE + "Armure");
 		
 		this.inventory.setContents(items);
-		
-		this.owner = owner;
-		
+
 		return this.inventory;
 	}
 
