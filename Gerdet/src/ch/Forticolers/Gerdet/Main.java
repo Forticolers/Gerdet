@@ -83,7 +83,7 @@ public class Main extends JavaPlugin implements Listener
 				getLogger().info("Directory succesfully created !");
 			}
 			//Création des fichier stuff et armure
-			File fileArmor, fileStuff;				
+			File fileArmor, fileStuff;	
 			fileArmor = new File(Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Armor.txt");
 			fileStuff = new File(Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Stuff.txt");
 			//armure
