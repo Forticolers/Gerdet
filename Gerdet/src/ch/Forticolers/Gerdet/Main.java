@@ -57,48 +57,6 @@ public class Main extends JavaPlugin implements Listener
 		//Les listener vont etre redirigés dans un autre classe dans le future----------------------------------------------------
 		Bukkit.getPluginManager().registerEvents(this, this);
 	}
-
-	@Override
-	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
-	{
-		//Variables ici
-		
-		Player player = (Player)sender;
-		
-		//Codes ici
-		if(sender instanceof Player)
-		{
-			if(command.getName().equalsIgnoreCase("armory"))
-			{
-				if(args.length > 1)
-				{
-					if(args[0].equalsIgnoreCase("show"))
-					{
-						Utils.sendCustomMessage(player, "show");
-						return false;
-					}
-					if(args[0].equalsIgnoreCase("modify"))
-					{
-						Utils.sendCustomMessage(player, "modify");
-						return false;
-					}
-					if(args[0].equalsIgnoreCase("select"))
-					{
-						Utils.sendCustomMessage(player, "select");
-						return false;
-					}
-					if(args[0].equalsIgnoreCase("reset"))
-					{
-						Utils.sendCustomMessage(player, "reset");
-						return false;
-					}					
-				}
-				Bukkit.dispatchCommand(sender, "help " + command.getName());
-				return true;
-			}
-		}
-		return false;
-	}
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event)
