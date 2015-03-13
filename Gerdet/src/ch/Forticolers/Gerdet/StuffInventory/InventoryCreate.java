@@ -1,4 +1,4 @@
-package ch.Forticolers.Gerdet.Inventory;
+package ch.Forticolers.Gerdet.StuffInventory;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
