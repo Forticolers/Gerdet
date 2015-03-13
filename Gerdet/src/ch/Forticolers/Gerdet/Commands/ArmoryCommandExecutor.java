@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 import ch.Forticolers.Gerdet.Utils;
 import ch.Forticolers.Gerdet.StuffInventory.ArmorVirtualInventory;
+import ch.Forticolers.Gerdet.StuffInventory.StuffVirtualInventory;
 
 public class ArmoryCommandExecutor implements CommandExecutor{
 
@@ -21,7 +22,7 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 		
 				Player player = (Player)sender;
 				
-				ArmorVirtualInventory VIInstance = new ArmorVirtualInventory();
+				StuffVirtualInventory VIInstance = new StuffVirtualInventory();
 				
 				//Codes ici
 				if(sender instanceof Player)

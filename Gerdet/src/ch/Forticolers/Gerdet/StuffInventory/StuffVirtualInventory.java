@@ -1,24 +1,37 @@
 package ch.Forticolers.Gerdet.StuffInventory;
 
-import net.minecraft.server.v1_8_R1.ItemStack;
-
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
-public class StuffVirtualInventory 
-{	
-	public StuffVirtualInventory()
-	{
-		
-	}
+import ch.Forticolers.Gerdet.VirtualInventory.IVirtualInventory;
+
+public class StuffVirtualInventory implements IVirtualInventory 
+{
+	Inventory inventory;
 	
-	public Inventory initOnFirstLogin(Player player)
+	@Override
+	public Inventory getInventory() 
 	{
-		return null;	
+		return this.inventory;
 	}
-	public static ItemStack[] GetArmorFromPlay(Player player){
-		ItemStack[] armor = new ItemStack[36];
+
+	@Override
+	public Inventory createInventory(ItemStack[] items) 
+	{
+		this.inventory = Bukkit.createInventory(null, 45,ChatColor.UNDERLINE + "Stuff");
 		
-		return armor;		
+		this.inventory.setContents(items);
+
+		return this.inventory;
 	}
+
+	@Override
+	public void showInventory(Player player, Inventory inventory) 
+	{
+		player.openInventory(inventory);
+	}
+
 }

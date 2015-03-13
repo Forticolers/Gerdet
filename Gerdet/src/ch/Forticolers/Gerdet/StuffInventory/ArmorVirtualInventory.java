@@ -33,10 +33,4 @@ public class ArmorVirtualInventory implements IVirtualInventory
 	{
 		player.openInventory(inventory);
 	}
-	
-	public static ItemStack[] GetStuffFromPlay(Player player){
-		ItemStack[] stuff = new ItemStack[36];
-		
-		return stuff;		
-	}
 }
