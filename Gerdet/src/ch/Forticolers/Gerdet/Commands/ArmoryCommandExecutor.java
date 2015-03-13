@@ -10,7 +10,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import ch.Forticolers.Gerdet.Utils;
-import ch.Forticolers.Gerdet.StuffInventory.InventoryVI;
+import ch.Forticolers.Gerdet.StuffInventory.ArmorVirtualInventory;
 
 public class ArmoryCommandExecutor implements CommandExecutor{
 
@@ -21,7 +21,7 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 		
 				Player player = (Player)sender;
 				
-				InventoryVI VIInstance = new InventoryVI();
+				ArmorVirtualInventory VIInstance = new ArmorVirtualInventory();
 				
 				//Codes ici
 				if(sender instanceof Player)

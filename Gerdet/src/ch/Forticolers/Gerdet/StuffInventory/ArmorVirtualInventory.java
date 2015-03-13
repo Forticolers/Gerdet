@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 
 import ch.Forticolers.Gerdet.VirtualInventory.IVirtualInventory;
 
-public class InventoryVI implements IVirtualInventory 
+public class ArmorVirtualInventory implements IVirtualInventory 
 {
 	Inventory inventory;
 	
