@@ -1,5 +1,6 @@
 package ch.Forticolers.Gerdet.StuffInventory;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -11,7 +12,7 @@ public class UtilsStuffInventory
 	{
 		ItemStack sep = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)15);
 		ItemMeta sm = sep.getItemMeta();
-		sm.setDisplayName("");
+		sm.setDisplayName(ChatColor.RESET + "");
 		sep.setItemMeta(sm);
 				
 		ItemStack[] armor = new ItemStack[36];
@@ -59,7 +60,7 @@ public class UtilsStuffInventory
 	public static ItemStack[] GetStuffFromPlay(Player player){
 		ItemStack sep = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)15);
 		ItemMeta sm = sep.getItemMeta();
-		sm.setDisplayName("");
+		sm.setDisplayName(ChatColor.RESET + "");
 		sep.setItemMeta(sm);
 		
 		ItemStack[] stuff = new ItemStack[45];
