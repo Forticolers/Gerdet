@@ -3,12 +3,16 @@ package ch.Forticolers.Gerdet.StuffInventory;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class UtilsStuffInventory 
 {
 	public static ItemStack[] GetArmorFromPlay(Player player)
 	{
 		ItemStack sep = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)15);
+		ItemMeta sm = sep.getItemMeta();
+		sm.setDisplayName("");
+		sep.setItemMeta(sm);
 				
 		ItemStack[] armor = new ItemStack[36];
 		
@@ -22,7 +26,7 @@ public class UtilsStuffInventory
 		armor[7] = sep;
 		armor[8] = sep;
 		armor[9] = new ItemStack(Material.DIAMOND_CHESTPLATE);
-		armor[10] = 
+		armor[10] = sep;
 		armor[11] = sep;
 		armor[12] = sep;
 		armor[13] = sep;
@@ -54,11 +58,16 @@ public class UtilsStuffInventory
 	}
 	public static ItemStack[] GetStuffFromPlay(Player player){
 		ItemStack sep = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)15);
+		ItemMeta sm = sep.getItemMeta();
+		sm.setDisplayName("");
+		sep.setItemMeta(sm);
 		
 		ItemStack[] stuff = new ItemStack[45];
 		
+		stuff[27] = sep;
 		stuff[28] = sep;
 		stuff[29] = sep;
+		stuff[30] = sep;
 		stuff[31] = sep;
 		stuff[32] = sep;
 		stuff[33] = sep;
