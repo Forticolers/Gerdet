@@ -28,7 +28,7 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 				{
 					if(command.getName().equalsIgnoreCase("armory"))
 					{
-						if(args.length > 1)
+						if(args.length > 0)
 						{
 							if(args[0].equalsIgnoreCase("show"))
 							{
@@ -39,6 +39,7 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 								});
 								
 								VIInstance.showInventory(player, inv);
+								
 								return true;
 							}
 							if(args[0].equalsIgnoreCase("modify"))
