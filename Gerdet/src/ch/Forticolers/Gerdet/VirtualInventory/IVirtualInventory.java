@@ -19,9 +19,10 @@ public interface IVirtualInventory
 	
 	/**
 	 * @param items Les items présents dans l'inventory
+	 * @param owner L'owner de l'inventory
 	 * @return L'inventory créé
 	 */
-	Inventory createInventory(ItemStack[] items);
+	Inventory createInventory(Player owner, ItemStack[] items);
 	
 	/**
 	 * @param player le player qui va ouvrir l'inventory

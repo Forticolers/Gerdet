@@ -26,11 +26,13 @@ public class InventoryVI implements IVirtualInventory
 	}
 
 	@Override
-	public Inventory createInventory(ItemStack[] items) 
+	public Inventory createInventory(Player owner, ItemStack[] items) 
 	{
-		this.inventory = Bukkit.createInventory(getOwner(), 9,ChatColor.UNDERLINE + "Inv");
+		this.inventory = Bukkit.createInventory(owner, 9,ChatColor.UNDERLINE + "Inv");
 		
 		this.inventory.setContents(items);
+		
+		this.owner = owner;
 		
 		return this.inventory;
 	}
