@@ -1,4 +1,4 @@
-package ch.Forticolers.Gerdet.StuffInventory;
+package ch.Forticolers.Gerdet.stuffinventory;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -6,9 +6,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import ch.Forticolers.Gerdet.VirtualInventory.IVirtualInventory;
+import ch.Forticolers.Gerdet.virtualinventory.IVirtualInventory;
 
-public class ArmorVirtualInventory implements IVirtualInventory 
+public class StuffVirtualInventory implements IVirtualInventory 
 {
 	Inventory inventory;
 	
@@ -21,7 +21,7 @@ public class ArmorVirtualInventory implements IVirtualInventory
 	@Override
 	public Inventory createInventory(ItemStack[] items) 
 	{
-		this.inventory = Bukkit.createInventory(null, 36,ChatColor.UNDERLINE + "Armure");
+		this.inventory = Bukkit.createInventory(null, 45,ChatColor.UNDERLINE + "Stuff");
 		
 		this.inventory.setContents(items);
 
@@ -33,4 +33,5 @@ public class ArmorVirtualInventory implements IVirtualInventory
 	{
 		player.openInventory(inventory);
 	}
+
 }

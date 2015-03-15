@@ -3,10 +3,10 @@ package ch.Forticolers.Gerdet;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import ch.Forticolers.Gerdet.Commands.ArmoryCommandExecutor;
-import ch.Forticolers.Gerdet.Listeners.PlayerJoinListener;
-import ch.Forticolers.Gerdet.StuffInventory.ArmorListener;
-import ch.Forticolers.Gerdet.StuffInventory.StuffListener;
+import ch.Forticolers.Gerdet.commands.ArmoryCommandExecutor;
+import ch.Forticolers.Gerdet.listeners.PlayerJoinListener;
+import ch.Forticolers.Gerdet.stuffinventory.ArmorListener;
+import ch.Forticolers.Gerdet.stuffinventory.StuffListener;
 
 public class Main extends JavaPlugin
 {

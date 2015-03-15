@@ -1,4 +1,4 @@
-package ch.Forticolers.Gerdet.Commands;
+package ch.Forticolers.Gerdet.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -8,9 +8,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 import ch.Forticolers.Gerdet.Utils;
-import ch.Forticolers.Gerdet.StuffInventory.ArmorVirtualInventory;
-import ch.Forticolers.Gerdet.StuffInventory.StuffVirtualInventory;
-import ch.Forticolers.Gerdet.StuffInventory.UtilsStuffInventory;
+import ch.Forticolers.Gerdet.stuffinventory.ArmorVirtualInventory;
+import ch.Forticolers.Gerdet.stuffinventory.StuffVirtualInventory;
+import ch.Forticolers.Gerdet.stuffinventory.UtilsStuffInventory;
 
 public class ArmoryCommandExecutor implements CommandExecutor{
 

@@ -1,4 +1,4 @@
-package ch.Forticolers.Gerdet.Listeners;
+package ch.Forticolers.Gerdet.listeners;
 
 public class EquipementClickListener {
 

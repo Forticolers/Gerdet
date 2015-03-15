@@ -1,4 +1,4 @@
-package ch.Forticolers.Gerdet.VirtualInventory;
+package ch.Forticolers.Gerdet.virtualinventory;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;

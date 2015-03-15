@@ -1,4 +1,4 @@
-package ch.Forticolers.Gerdet.StuffInventory;
+package ch.Forticolers.Gerdet.stuffinventory;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
