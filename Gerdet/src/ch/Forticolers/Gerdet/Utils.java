@@ -50,4 +50,14 @@ public class Utils
 			}
 		}
 	}
+	
+	public static String getArmorFilePath(Player player)
+	{
+		return Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Armor.yml";
+	}
+	
+	public static String getStuffFilePath(Player player)
+	{
+		return Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Stuff.yml";
+	}
 }

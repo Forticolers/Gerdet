@@ -13,6 +13,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 
+import ch.Forticolers.Gerdet.Utils;
+
 public class PlayerJoinListener implements Listener 
 {
 	//UTILISER CETTE VARIABLE POUR AVOIR ACCES A METHODES DE LA CLASSE QUI EXTENDS JAVAPLUGIN (MAIN)
@@ -54,8 +56,8 @@ public class PlayerJoinListener implements Listener
 		
 		//Création des fichier stuff et armure
 		File fileArmor, fileStuff;	
-		fileArmor = new File(Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Armor.yml");
-		fileStuff = new File(Bukkit.getPluginManager().getPlugin("Gerdet").getDataFolder() +"\\" + player.getName() +"\\"+player.getName()+"_Stuff.yml");
+		fileArmor = new File(Utils.getArmorFilePath(player));
+		fileStuff = new File(Utils.getStuffFilePath(player));
 		
 		FileConfiguration armorYaml = YamlConfiguration.loadConfiguration(fileArmor);
 		FileConfiguration stuffYaml = YamlConfiguration.loadConfiguration(fileStuff);
