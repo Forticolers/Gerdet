@@ -43,6 +43,8 @@ public class Main extends JavaPlugin
 	{
 		//ici il y auras les listener pour les VirtualInventoy et le methodes qui on besoin d'etre executées a l'init.
 		
+		
+		//-----------Commands Executors-----------------------------------------------------------------------
 		CommandExecutor armoryExecutor = new ArmoryCommandExecutor();
 		getCommand("armory").setExecutor(armoryExecutor);
 		
