@@ -17,69 +17,63 @@ public class ArmoryCommandExecutor implements CommandExecutor{
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
 	{
-				//Variables ici
+		//Variables ici
 		
-				Player player = (Player)sender;
+		Player player = (Player)sender;
 				
-				ArmorVirtualInventory AVIInstance = new ArmorVirtualInventory();
-				StuffVirtualInventory SVIInstance = new StuffVirtualInventory();
+		ArmorVirtualInventory AVIInstance = new ArmorVirtualInventory();
+		StuffVirtualInventory SVIInstance = new StuffVirtualInventory();
 				
-				//Codes ici
-				if(sender instanceof Player)
+		//Codes ici
+		if(sender instanceof Player)
+		{
+			if(command.getName().equalsIgnoreCase("armory"))
+			{
+				if(args.length > 0)
 				{
-					if(command.getName().equalsIgnoreCase("armory"))
+					if(args[0].equalsIgnoreCase("show"))
 					{
-						if(args.length > 0)
+						if(args.length > 1)
 						{
-							if(args[0].equalsIgnoreCase("show"))
-							{
-								if(args.length > 1)
-								{
-									if (args[1].equalsIgnoreCase("armor"))
-									{	
-										Inventory inventory = AVIInstance.createInventory(UtilsStuffInventory.GetArmorFromPlay(player));
+							if (args[1].equalsIgnoreCase("armor"))
+							{	
+								Inventory inventory = AVIInstance.createInventory(UtilsStuffInventory.GetArmorFromPlay(player));
 									
-										AVIInstance.showInventory(player, inventory);
-									
-										return true;
-									}
-									if (args[1].equalsIgnoreCase("stuff"))
-									{
-										Inventory inventory = SVIInstance.createInventory(UtilsStuffInventory.GetStuffFromPlay(player));
-									
-										SVIInstance.showInventory(player, inventory);
-										return true;
-									}
-									
-									return false;
-								
-								}
-								
-								
-								Utils.sendCustomMessage(player, "show");								
-								
+								AVIInstance.showInventory(player, inventory);
+							
+								return true;
 							}
-							if(args[0].equalsIgnoreCase("modify"))
+							if (args[1].equalsIgnoreCase("stuff"))
 							{
-								Utils.sendCustomMessage(player, "modify");
-								return false;
-							}
-							if(args[0].equalsIgnoreCase("select"))
-							{
-								Utils.sendCustomMessage(player, "select");
-								return false;
-							}
-							if(args[0].equalsIgnoreCase("reset"))
-							{
-								Utils.sendCustomMessage(player, "reset");
-								return false;
-							}					
-						}
-						Bukkit.dispatchCommand(sender, "help " + command.getName());
-						return true;
+								Inventory inventory = SVIInstance.createInventory(UtilsStuffInventory.GetStuffFromPlay(player));
+									
+								SVIInstance.showInventory(player, inventory);
+								return true;
+							}									
+							return false;								
+						}																
+						Utils.sendCustomMessage(player, "show");																
 					}
+					if(args[0].equalsIgnoreCase("modify"))
+					{
+						Utils.sendCustomMessage(player, "modify");
+						return false;
+					}
+					if(args[0].equalsIgnoreCase("select"))
+					{
+						Utils.sendCustomMessage(player, "select");
+						return false;
+					}
+					if(args[0].equalsIgnoreCase("reset"))
+					{
+						Utils.sendCustomMessage(player, "reset");
+						return false;
+					}					
 				}
-				return false;
+				Bukkit.dispatchCommand(sender, "help " + command.getName());
+				return true;
+			}
+		}
+		return false;
 	}
-
 }
