@@ -61,7 +61,6 @@ public class PlayerJoinListener implements Listener
 		
 		FileConfiguration armorYaml = YamlConfiguration.loadConfiguration(fileArmor);
 		FileConfiguration stuffYaml = YamlConfiguration.loadConfiguration(fileStuff);
-					
 		try 
 		{
 			armorYaml.save(fileArmor);
